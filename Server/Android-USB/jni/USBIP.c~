@@ -1,0 +1,7 @@
+#include "USBIP.h"
+
+JNIEXPORT jint JNICALL Java_app_android_USBIP_USBIP_1AppActivity_startUSBIP
+  (JNIEnv *evn, jobject obj) {
+	//do_standalone_mode(0);
+	return 1;
+}

@@ -1,0 +1,501 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AsyncURB	./lib/stub_driver.h	/^} AsyncURB;$/;"	t	typeref:struct:_AsyncURB
+BUG	./lib/usbip_common.h	102;"	d
+BUS_ID_SIZE	./cmd/utils.h	27;"	d
+DBG	./lib/names.c	469;"	d	file:
+DBG_UDEV_INTEGER	./lib/usbip_common.c	61;"	d	file:
+DBG_UINF_INTEGER	./lib/usbip_common.c	64;"	d	file:
+HASH1	./lib/names.c	92;"	d	file:
+HASH2	./lib/names.c	93;"	d	file:
+HASHSZ	./lib/names.c	94;"	d	file:
+MAXLINE	./cmd/utils.c	161;"	d	file:
+MAXNPORT	./lib/vhci_driver.h	12;"	d
+MAXSOCK	./cmd/stub_server.c	1701;"	d	file:
+MAX_BUFF	./cmd/vhci_attach.c	81;"	d	file:
+MAX_DESC_SIZE	./lib/stub_driver.c	144;"	d	file:
+OP_CRYPKEY	./cmd/usbip_network.h	135;"	d
+OP_DEVINFO	./cmd/usbip_network.h	50;"	d
+OP_DEVLIST	./cmd/usbip_network.h	151;"	d
+OP_EXPORT	./cmd/usbip_network.h	90;"	d
+OP_IMPORT	./cmd/usbip_network.h	66;"	d
+OP_REPLY	./cmd/usbip_network.h	25;"	d
+OP_REP_CRYPKEY	./cmd/usbip_network.h	137;"	d
+OP_REP_DEVINFO	./cmd/usbip_network.h	52;"	d
+OP_REP_DEVLIST	./cmd/usbip_network.h	153;"	d
+OP_REP_EXPORT	./cmd/usbip_network.h	92;"	d
+OP_REP_IMPORT	./cmd/usbip_network.h	68;"	d
+OP_REP_UNEXPORT	./cmd/usbip_network.h	114;"	d
+OP_REP_UNSPEC	./cmd/usbip_network.h	46;"	d
+OP_REQUEST	./cmd/usbip_network.h	24;"	d
+OP_REQ_CRYPKEY	./cmd/usbip_network.h	136;"	d
+OP_REQ_DEVINFO	./cmd/usbip_network.h	51;"	d
+OP_REQ_DEVLIST	./cmd/usbip_network.h	152;"	d
+OP_REQ_EXPORT	./cmd/usbip_network.h	91;"	d
+OP_REQ_IMPORT	./cmd/usbip_network.h	67;"	d
+OP_REQ_UNEXPORT	./cmd/usbip_network.h	113;"	d
+OP_REQ_UNSPEC	./cmd/usbip_network.h	45;"	d
+OP_UNEXPORT	./cmd/usbip_network.h	112;"	d
+OP_UNSPEC	./cmd/usbip_network.h	44;"	d
+PACK_OP_COMMON	./cmd/usbip_network.h	35;"	d
+PACK_OP_DEVLIST_REPLY	./cmd/usbip_network.h	171;"	d
+PACK_OP_DEVLIST_REQUEST	./cmd/usbip_network.h	168;"	d
+PACK_OP_EXPORT_REPLY	./cmd/usbip_network.h	107;"	d
+PACK_OP_EXPORT_REQUEST	./cmd/usbip_network.h	103;"	d
+PACK_OP_IMPORT_REPLY	./cmd/usbip_network.h	82;"	d
+PACK_OP_IMPORT_REQUEST	./cmd/usbip_network.h	79;"	d
+PACK_OP_UNEXPORT_REPLY	./cmd/usbip_network.h	128;"	d
+PACK_OP_UNEXPORT_REQUEST	./cmd/usbip_network.h	124;"	d
+READ_ATTR	./lib/usbip_common.c	180;"	d	file:
+SDEV_ST_AVAILABLE	./lib/usbip_common.h	/^	SDEV_ST_AVAILABLE = 0x01,$/;"	e	enum:usbip_device_status
+SDEV_ST_ERROR	./lib/usbip_common.h	/^	SDEV_ST_ERROR,$/;"	e	enum:usbip_device_status
+SDEV_ST_USED	./lib/usbip_common.h	/^	SDEV_ST_USED,$/;"	e	enum:usbip_device_status
+ST_NA	./cmd/usbip_network.h	30;"	d
+ST_OK	./cmd/usbip_network.h	29;"	d
+UNUSED	./lib/usbip_common.h	134;"	d
+USBDEVFS_MAX_ISO_LEN	./cmd/stub_server.c	144;"	d	file:
+USBDEVFS_MAX_LEN	./cmd/stub_server.c	142;"	d	file:
+USBIDS_FILE	./lib/usbip_common.h	31;"	d
+USBIP_CMD_SUBMIT	./cmd/stub_server.c	43;"	d	file:
+USBIP_CMD_UNLINK	./cmd/stub_server.c	44;"	d	file:
+USBIP_DIR_IN	./cmd/stub_server.c	60;"	d	file:
+USBIP_DIR_OUT	./cmd/stub_server.c	59;"	d	file:
+USBIP_PORT	./cmd/usbip_network.h	198;"	d
+USBIP_PORT_STRING	./cmd/usbip_network.h	199;"	d
+USBIP_RESET_DEV	./cmd/stub_server.c	47;"	d	file:
+USBIP_RET_SUBMIT	./cmd/stub_server.c	45;"	d	file:
+USBIP_RET_UNLINK	./cmd/stub_server.c	46;"	d	file:
+USB_MAX_ISO_PACKET_SIZE	./cmd/stub_server.c	143;"	d	file:
+USB_PORT_FEAT_RESET	./cmd/stub_server.c	1062;"	d	file:
+USB_RT_PORT	./cmd/stub_server.c	1061;"	d	file:
+VDEV_ST_ERROR	./lib/usbip_common.h	/^	VDEV_ST_ERROR$/;"	e	enum:usbip_device_status
+VDEV_ST_NOTASSIGNED	./lib/usbip_common.h	/^	VDEV_ST_NOTASSIGNED,$/;"	e	enum:usbip_device_status
+VDEV_ST_NULL	./lib/usbip_common.h	/^	VDEV_ST_NULL,$/;"	e	enum:usbip_device_status
+VDEV_ST_USED	./lib/usbip_common.h	/^	VDEV_ST_USED,$/;"	e	enum:usbip_device_status
+VHCI_STATE_PATH	./lib/usbip_common.h	35;"	d
+_AsyncURB	./lib/stub_driver.h	/^typedef struct _AsyncURB$/;"	s
+_GNU_SOURCE	./cmd/bind-driver.c	10;"	d	file:
+_GNU_SOURCE	./cmd/stub_server.c	25;"	d	file:
+_GNU_SOURCE	./cmd/utils.h	6;"	d
+_GNU_SOURCE	./cmd/vhci_attach.c	552;"	d	file:
+_NAMES_H	./lib/names.h	33;"	d
+_USBIP_COMMON_H	./lib/usbip_common.h	6;"	d
+_USBIP_H	./lib/usbip.h	6;"	d
+_USBIP_NETWORK_H	./cmd/usbip_network.h	6;"	d
+_USBIP_STUB_DRIVER_H	./lib/stub_driver.h	6;"	d
+_VHCI_DRIVER_H	./lib/vhci_driver.h	6;"	d
+__reserved	./cmd/usbip_network.h	/^	uint32_t __reserved;$/;"	m	struct:op_crypkey_reply
+actual_length	./cmd/stub_server.c	/^	int actual_length; \/* returned data length *\/$/;"	m	struct:usbip_header_ret_submit	file:
+actual_length	./cmd/stub_server.c	/^	unsigned int actual_length;$/;"	m	struct:usbip_iso_packet_descriptor	file:
+add_ep_info	./lib/stub_driver.c	/^static int add_ep_info(struct usbip_exported_device *edev,$/;"	f	file:
+alter	./lib/stub_driver.h	/^	unsigned char alter;$/;"	m	struct:usbip_endpoint
+attach_device	./cmd/vhci_attach.c	/^static void attach_device(char *host, char *busid)$/;"	f	file:
+attach_devices_all	./cmd/vhci_attach.c	/^static void attach_devices_all(char *host)$/;"	f	file:
+attach_exported_devices	./cmd/vhci_attach.c	/^static int attach_exported_devices(char *host, int sockfd)$/;"	f	file:
+audioterminal	./lib/names.c	/^struct audioterminal {$/;"	s	file:
+audioterminals	./lib/names.c	/^static struct audioterminal *audioterminals[HASHSZ] = { NULL, };$/;"	v	typeref:struct:audioterminal	file:
+bConfigurationValue	./lib/usbip_common.h	/^	uint8_t bConfigurationValue;$/;"	m	struct:usb_device
+bDeviceClass	./lib/usbip_common.h	/^	uint8_t bDeviceClass;$/;"	m	struct:usb_device
+bDeviceProtocol	./lib/usbip_common.h	/^	uint8_t bDeviceProtocol;$/;"	m	struct:usb_device
+bDeviceSubClass	./lib/usbip_common.h	/^	uint8_t bDeviceSubClass;$/;"	m	struct:usb_device
+bInterfaceClass	./lib/usbip_common.h	/^	uint8_t bInterfaceClass;$/;"	m	struct:usb_interface
+bInterfaceProtocol	./lib/usbip_common.h	/^	uint8_t bInterfaceProtocol;$/;"	m	struct:usb_interface
+bInterfaceSubClass	./lib/usbip_common.h	/^	uint8_t bInterfaceSubClass;$/;"	m	struct:usb_interface
+bNumConfigurations	./lib/usbip_common.h	/^	uint8_t bNumConfigurations;$/;"	m	struct:usb_device
+bNumInterfaces	./lib/usbip_common.h	/^	uint8_t bNumInterfaces;$/;"	m	struct:usb_device
+base	./cmd/stub_server.c	/^	struct usbip_header_basic base;$/;"	m	struct:usbip_header	typeref:struct:usbip_header::usbip_header_basic	file:
+bcdDevice	./lib/usbip_common.h	/^	uint16_t bcdDevice;$/;"	m	struct:usb_device
+be32_to_cpus	./cmd/stub_server.c	/^void be32_to_cpus(int *a)$/;"	f
+biass	./lib/names.c	/^static struct genericstrtable *biass[HASHSZ] = { NULL, };$/;"	v	typeref:struct:genericstrtable	file:
+bind_to_usbip	./cmd/bind-driver.c	/^static int bind_to_usbip(char *busid)$/;"	f	file:
+busid	./cmd/usbip_network.h	/^	char busid[SYSFS_BUS_ID_SIZE];$/;"	m	struct:op_devinfo_request
+busid	./cmd/usbip_network.h	/^	char busid[SYSFS_BUS_ID_SIZE];$/;"	m	struct:op_import_request
+busid	./lib/usbip_common.h	/^	char busid[SYSFS_BUS_ID_SIZE];$/;"	m	struct:usb_device
+busnum	./lib/usbip_common.h	/^	uint32_t busnum;$/;"	m	struct:usb_device
+busnum	./lib/vhci_driver.h	/^	uint8_t busnum;$/;"	m	struct:usbip_imported_device
+cancel_urb	./cmd/stub_server.c	/^static int cancel_urb(struct dlist * processing_urbs, unsigned int seqnum, int fd)$/;"	f	file:
+cdev_list	./lib/vhci_driver.h	/^	struct dlist *cdev_list;	\/* list of class device *\/$/;"	m	struct:usbip_imported_device	typeref:struct:usbip_imported_device::dlist
+cdev_list	./lib/vhci_driver.h	/^	struct dlist *cdev_list;	\/* list of class device *\/$/;"	m	struct:usbip_vhci_driver	typeref:struct:usbip_vhci_driver::dlist
+check_usbip_device	./lib/vhci_driver.c	/^static int check_usbip_device(struct sysfs_class_device *cdev)$/;"	f	file:
+claim_dev	./lib/stub_driver.c	/^static int claim_dev(struct usbip_exported_device *edev)$/;"	f	file:
+class	./lib/names.c	/^struct class {$/;"	s	file:
+class_device	./lib/vhci_driver.h	/^struct class_device {$/;"	s
+classes	./lib/names.c	/^static struct class *classes[HASHSZ] = { NULL, };$/;"	v	typeref:struct:class	file:
+classid	./lib/names.c	/^	u_int8_t classid, subclassid, protocolid;$/;"	m	struct:protocol	file:
+classid	./lib/names.c	/^	u_int8_t classid, subclassid;$/;"	m	struct:subclass	file:
+classid	./lib/names.c	/^	u_int8_t classid;$/;"	m	struct:class	file:
+client_fd	./lib/stub_driver.h	/^	int client_fd;$/;"	m	struct:usbip_exported_device
+client_gio_id	./lib/stub_driver.h	/^	int client_gio_id;$/;"	m	struct:usbip_exported_device
+clspath	./lib/vhci_driver.h	/^	char clspath[SYSFS_PATH_MAX];$/;"	m	struct:class_device
+cmd_submit	./cmd/stub_server.c	/^		struct usbip_header_cmd_submit	cmd_submit;$/;"	m	union:usbip_header::__anon1	typeref:struct:usbip_header::__anon1::usbip_header_cmd_submit	file:
+cmd_unlink	./cmd/stub_server.c	/^		struct usbip_header_cmd_unlink	cmd_unlink;$/;"	m	union:usbip_header::__anon1	typeref:struct:usbip_header::__anon1::usbip_header_cmd_unlink	file:
+code	./cmd/usbip_network.h	/^	uint16_t code;$/;"	m	struct:op_common
+command	./cmd/stub_server.c	/^	unsigned int command;$/;"	m	struct:usbip_header_basic	file:
+correct_endian_basic	./cmd/stub_server.c	/^static void correct_endian_basic(struct usbip_header_basic *base, int send)$/;"	f	file:
+correct_endian_cmd_submit	./cmd/stub_server.c	/^static void correct_endian_cmd_submit(struct usbip_header_cmd_submit *pdu, int send)$/;"	f	file:
+correct_endian_cmd_unlink	./cmd/stub_server.c	/^static void correct_endian_cmd_unlink(struct usbip_header_cmd_unlink *pdu, int send)$/;"	f	file:
+correct_endian_ret_submit	./cmd/stub_server.c	/^static void correct_endian_ret_submit(struct usbip_header_ret_submit *pdu, int send)$/;"	f	file:
+correct_endian_ret_unlink	./cmd/stub_server.c	/^static void correct_endian_ret_unlink(struct usbip_header_ret_unlink *pdu, int send)$/;"	f	file:
+countrycodes	./lib/names.c	/^static struct genericstrtable *countrycodes[HASHSZ] = { NULL, };$/;"	v	typeref:struct:genericstrtable	file:
+cpu_to_be32s	./cmd/stub_server.c	/^void cpu_to_be32s(int *a)$/;"	f
+data	./lib/stub_driver.h	/^    char *data;$/;"	m	struct:_AsyncURB
+data_len	./lib/stub_driver.h	/^    unsigned int data_len;$/;"	m	struct:_AsyncURB
+dbg	./lib/usbip_common.h	88;"	d
+delete_aurb	./cmd/stub_server.c	/^int delete_aurb(struct dlist * dlist, unsigned int seqnum,$/;"	f
+desc	./lib/stub_driver.h	/^	char * desc;$/;"	m	struct:usbip_exported_device
+desc	./lib/usbip_common.c	/^	char *desc;$/;"	m	struct:portst_string	file:
+desc	./lib/usbip_common.c	/^	char *desc;$/;"	m	struct:speed_string	file:
+desc_len	./lib/stub_driver.h	/^	int desc_len;$/;"	m	struct:usbip_exported_device
+detach_port	./cmd/vhci_attach.c	/^static void detach_port(char *port)$/;"	f	file:
+devid	./cmd/stub_server.c	/^	unsigned int devid;  $/;"	m	struct:usbip_header_basic	file:
+devid	./lib/vhci_driver.h	/^	uint32_t devid;$/;"	m	struct:usbip_imported_device
+devnum	./lib/usbip_common.h	/^	uint32_t devnum;$/;"	m	struct:usb_device
+devnum	./lib/vhci_driver.h	/^	uint8_t devnum;$/;"	m	struct:usbip_imported_device
+devpath	./lib/vhci_driver.h	/^	char devpath[SYSFS_PATH_MAX];$/;"	m	struct:class_device
+direction	./cmd/stub_server.c	/^	unsigned int direction;$/;"	m	struct:usbip_header_basic	file:
+do_standalone_mode	./cmd/stub_server.c	/^static void do_standalone_mode(gboolean daemonize)$/;"	f	file:
+dump_urb	./cmd/stub_server.c	/^static void dump_urb(struct usbdevfs_urb *urb)$/;"	f	file:
+dump_usb_device	./lib/usbip_common.c	/^void dump_usb_device(struct usb_device *udev)$/;"	f
+dump_usb_interface	./lib/usbip_common.c	/^void dump_usb_interface(struct usb_interface *uinf)$/;"	f
+edev_list	./lib/stub_driver.h	/^	struct dlist *edev_list;	\/* list of exported device *\/$/;"	m	struct:usbip_stub_driver	typeref:struct:usbip_stub_driver::dlist
+ep	./cmd/stub_server.c	/^	unsigned int ep;     \/* endpoint number *\/$/;"	m	struct:usbip_header_basic	file:
+eps	./lib/stub_driver.h	/^	struct usbip_endpoint * eps[2];$/;"	m	struct:usbip_exported_device	typeref:struct:usbip_exported_device::usbip_endpoint
+err	./lib/usbip_common.h	59;"	d
+error_count	./cmd/stub_server.c	/^	int error_count; \/* ISO only *\/$/;"	m	struct:usbip_header_ret_submit	file:
+export_device	./lib/stub_driver.c	/^struct usbip_exported_device * export_device(char *busid)$/;"	f
+find_aurb	./cmd/stub_server.c	/^AsyncURB * find_aurb(struct dlist * dlist, unsigned int seqnum,$/;"	f
+fix_urb_a_len	./cmd/stub_server.c	/^void fix_urb_a_len(struct usbdevfs_urb * urb)$/;"	f
+genericstrtable	./lib/names.c	/^struct genericstrtable {$/;"	s	file:
+get_devid	./lib/vhci_driver.c	/^static unsigned long get_devid(uint8_t busnum, uint8_t devnum)$/;"	f	file:
+get_ep	./cmd/stub_server.c	/^struct usbip_endpoint * get_ep(struct usbip_exported_device *edev,$/;"	f
+get_hc_busid	./lib/vhci_driver.c	/^static int get_hc_busid(char *sysfs_mntpath, char *hc_busid)$/;"	f	file:
+get_interface_number	./cmd/vhci_attach.c	/^static int get_interface_number(char *path)$/;"	f	file:
+get_nports	./lib/vhci_driver.c	/^static int get_nports(void)$/;"	f	file:
+get_transfer_flag	./cmd/stub_server.c	/^unsigned int get_transfer_flag(unsigned  int flag)$/;"	f
+getdevicename	./cmd/utils.c	/^int getdevicename(char *busid, char *name, size_t len)$/;"	f
+getdriver	./cmd/utils.c	/^int getdriver(char *busid, int conf, int infnum, char *driver, size_t len)$/;"	f
+hashnum	./lib/names.c	/^static unsigned int hashnum(unsigned int num)$/;"	f	file:
+hc_device	./lib/vhci_driver.h	/^	struct sysfs_device *hc_device; \/* \/sys\/devices\/platform\/vhci_hcd *\/$/;"	m	struct:usbip_vhci_driver	typeref:struct:usbip_vhci_driver::sysfs_device
+help_message	./cmd/stub_server.c	/^static const char help_message[] = "\\$/;"	v	file:
+help_message	./cmd/vhci_attach.c	/^const char help_message[] = "\\$/;"	v
+hiddescriptors	./lib/names.c	/^static struct genericstrtable *hiddescriptors[HASHSZ] = { NULL, };$/;"	v	typeref:struct:genericstrtable	file:
+huts	./lib/names.c	/^static struct genericstrtable *huts[HASHSZ] = { NULL, };$/;"	v	typeref:struct:genericstrtable	file:
+hutus	./lib/names.c	/^static struct genericstrtable *hutus[HASHSZ] = { NULL, };$/;"	v	typeref:struct:genericstrtable	file:
+idProduct	./lib/usbip_common.h	/^	uint16_t idProduct;$/;"	m	struct:usb_device
+idVendor	./lib/usbip_common.h	/^	uint16_t idVendor;$/;"	m	struct:usb_device
+idev	./lib/vhci_driver.h	/^	struct usbip_imported_device idev[MAXNPORT];$/;"	m	struct:usbip_vhci_driver	typeref:struct:usbip_vhci_driver::usbip_imported_device
+import_device	./cmd/vhci_attach.c	/^static int import_device(int sockfd, struct usb_device *udev)$/;"	f	file:
+imported_device_init	./lib/vhci_driver.c	/^static struct usbip_imported_device *imported_device_init(struct usbip_imported_device *idev, char *busid)$/;"	f	file:
+info	./lib/usbip_common.h	79;"	d
+interval	./cmd/stub_server.c	/^	int interval;$/;"	m	struct:usbip_header_cmd_submit	file:
+intf	./lib/stub_driver.h	/^	unsigned char intf;$/;"	m	struct:usbip_endpoint
+is_clear_halt_cmd	./cmd/stub_server.c	/^static int is_clear_halt_cmd(AsyncURB *aurb)$/;"	f	file:
+is_in_ep	./cmd/stub_server.c	/^static inline int is_in_ep(unsigned  int ep_num)$/;"	f	file:
+is_reset_device_cmd	./cmd/stub_server.c	/^static int is_reset_device_cmd(AsyncURB *aurb)$/;"	f	file:
+is_set_configuration_cmd	./cmd/stub_server.c	/^static int is_set_configuration_cmd(AsyncURB *aurb)$/;"	f	file:
+is_set_interface_cmd	./cmd/stub_server.c	/^static int is_set_interface_cmd(AsyncURB *aurb)$/;"	f	file:
+is_usb_device	./cmd/bind-driver.c	/^static int is_usb_device(char *busid)$/;"	f	file:
+is_valid_ep	./cmd/stub_server.c	/^static inline int is_valid_ep(struct usbip_exported_device *edev,$/;"	f	file:
+key	./cmd/usbip_network.h	/^	uint32_t key[4];$/;"	m	struct:op_crypkey_request
+langids	./lib/names.c	/^static struct genericstrtable *langids[HASHSZ] = { NULL, };$/;"	v	typeref:struct:genericstrtable	file:
+le16_to_cpu	./cmd/stub_server.c	1060;"	d	file:
+length	./cmd/stub_server.c	/^	unsigned int length;            \/* expected length *\/$/;"	m	struct:usbip_iso_packet_descriptor	file:
+listen_all_addrinfo	./cmd/stub_server.c	/^static int listen_all_addrinfo(struct addrinfo *ai_head, int lsock[])$/;"	f	file:
+log_addrinfo	./cmd/stub_server.c	/^static void log_addrinfo(struct addrinfo *ai)$/;"	f	file:
+longopts	./cmd/bind-driver.c	/^static const struct option longopts[] = {$/;"	v	typeref:struct:option	file:
+longopts	./cmd/stub_server.c	/^static const struct option longopts[] = {$/;"	v	typeref:struct:option	file:
+longopts	./cmd/vhci_attach.c	/^static const struct option longopts[] = {$/;"	v	typeref:struct:option	file:
+main	./cmd/bind-driver.c	/^int main(int argc, char **argv)$/;"	f
+main	./cmd/stub_server.c	/^int main(int argc, char *argv[])$/;"	f
+main	./cmd/vhci_attach.c	/^int main(int argc, char *argv[])$/;"	f
+main_loop	./cmd/stub_server.c	/^GMainLoop *main_loop;$/;"	v
+match_busid_path	./cmd/bind-driver.c	/^static const char match_busid_path[] = "\/sys\/bus\/usb\/drivers\/usbip\/match_busid";$/;"	v	file:
+max_packet_size	./lib/stub_driver.h	/^	unsigned int  max_packet_size;$/;"	m	struct:usbip_endpoint
+mem	./lib/names.c	/^	void *mem;$/;"	m	struct:pool	file:
+modify_match_busid	./cmd/bind-driver.c	/^static int modify_match_busid(char *busid, int add)$/;"	f	file:
+my_accept	./cmd/stub_server.c	/^static int my_accept(int lsock)$/;"	f	file:
+my_getaddrinfo	./cmd/stub_server.c	/^static struct addrinfo *my_getaddrinfo(char *host, int ai_family)$/;"	f	file:
+my_malloc	./lib/names.c	/^static void *my_malloc(size_t size)$/;"	f	file:
+name	./lib/names.c	/^	char name[1];$/;"	m	struct:audioterminal	file:
+name	./lib/names.c	/^	char name[1];$/;"	m	struct:class	file:
+name	./lib/names.c	/^	char name[1];$/;"	m	struct:product	file:
+name	./lib/names.c	/^	char name[1];$/;"	m	struct:protocol	file:
+name	./lib/names.c	/^	char name[1];$/;"	m	struct:subclass	file:
+name	./lib/names.c	/^	char name[1];$/;"	m	struct:vendor	file:
+name	./lib/names.c	/^        char name[1];$/;"	m	struct:genericstrtable	file:
+names_audioterminal	./lib/names.c	/^const char *names_audioterminal(u_int16_t termt)$/;"	f
+names_bias	./lib/names.c	/^const char *names_bias(u_int8_t b)$/;"	f
+names_class	./lib/names.c	/^const char *names_class(u_int8_t classid)$/;"	f
+names_countrycode	./lib/names.c	/^const char *names_countrycode(unsigned int countrycode)$/;"	f
+names_free	./lib/names.c	/^void names_free(void)$/;"	f
+names_genericstrtable	./lib/names.c	/^static const char *names_genericstrtable(struct genericstrtable *t[HASHSZ], unsigned int index)$/;"	f	file:
+names_hid	./lib/names.c	/^const char *names_hid(u_int8_t hidd)$/;"	f
+names_huts	./lib/names.c	/^const char *names_huts(unsigned int data)$/;"	f
+names_hutus	./lib/names.c	/^const char *names_hutus(unsigned int data)$/;"	f
+names_init	./lib/names.c	/^int names_init(char *n)$/;"	f
+names_langid	./lib/names.c	/^const char *names_langid(u_int16_t langid)$/;"	f
+names_physdes	./lib/names.c	/^const char *names_physdes(u_int8_t ph)$/;"	f
+names_product	./lib/names.c	/^const char *names_product(u_int16_t vendorid, u_int16_t productid)$/;"	f
+names_protocol	./lib/names.c	/^const char *names_protocol(u_int8_t classid, u_int8_t subclassid, u_int8_t protocolid)$/;"	f
+names_reporttag	./lib/names.c	/^const char *names_reporttag(u_int8_t rt)$/;"	f
+names_subclass	./lib/names.c	/^const char *names_subclass(u_int8_t classid, u_int8_t subclassid)$/;"	f
+names_vendor	./lib/names.c	/^const char *names_vendor(u_int16_t vendorid)$/;"	f
+ndev	./cmd/usbip_network.h	/^	uint32_t ndev;$/;"	m	struct:op_devlist_reply
+ndevs	./lib/stub_driver.h	/^	int ndevs;$/;"	m	struct:usbip_stub_driver
+new_audioterminal	./lib/names.c	/^static int new_audioterminal(const char *name, u_int16_t termt)$/;"	f	file:
+new_bias	./lib/names.c	/^static int new_bias(const char *name, u_int8_t b)$/;"	f	file:
+new_class	./lib/names.c	/^static int new_class(const char *name, u_int8_t classid)$/;"	f	file:
+new_countrycode	./lib/names.c	/^static int new_countrycode(const char *name, unsigned int countrycode)$/;"	f	file:
+new_genericstrtable	./lib/names.c	/^static int new_genericstrtable(struct genericstrtable *t[HASHSZ], const char *name, unsigned int index)$/;"	f	file:
+new_hid	./lib/names.c	/^static int new_hid(const char *name, u_int8_t hidd)$/;"	f	file:
+new_huts	./lib/names.c	/^static int new_huts(const char *name, unsigned int data)$/;"	f	file:
+new_hutus	./lib/names.c	/^static int new_hutus(const char *name, unsigned int data)$/;"	f	file:
+new_langid	./lib/names.c	/^static int new_langid(const char *name, u_int16_t langid)$/;"	f	file:
+new_physdes	./lib/names.c	/^static int new_physdes(const char *name, u_int8_t ph)$/;"	f	file:
+new_product	./lib/names.c	/^static int new_product(const char *name, u_int16_t vendorid, u_int16_t productid)$/;"	f	file:
+new_protocol	./lib/names.c	/^static int new_protocol(const char *name, u_int8_t classid, u_int8_t subclassid, u_int8_t protocolid)$/;"	f	file:
+new_reporttag	./lib/names.c	/^static int new_reporttag(const char *name, u_int8_t rt)$/;"	f	file:
+new_subclass	./lib/names.c	/^static int new_subclass(const char *name, u_int8_t classid, u_int8_t subclassid)$/;"	f	file:
+new_vendor	./lib/names.c	/^static int new_vendor(const char *name, u_int16_t vendorid)$/;"	f	file:
+next	./lib/names.c	/^	struct audioterminal *next;$/;"	m	struct:audioterminal	typeref:struct:audioterminal::audioterminal	file:
+next	./lib/names.c	/^	struct class *next;$/;"	m	struct:class	typeref:struct:class::class	file:
+next	./lib/names.c	/^	struct pool *next;$/;"	m	struct:pool	typeref:struct:pool::pool	file:
+next	./lib/names.c	/^	struct product *next;$/;"	m	struct:product	typeref:struct:product::product	file:
+next	./lib/names.c	/^	struct protocol *next;$/;"	m	struct:protocol	typeref:struct:protocol::protocol	file:
+next	./lib/names.c	/^	struct subclass *next;$/;"	m	struct:subclass	typeref:struct:subclass::subclass	file:
+next	./lib/names.c	/^	struct vendor *next;$/;"	m	struct:vendor	typeref:struct:vendor::vendor	file:
+next	./lib/names.c	/^        struct genericstrtable *next;$/;"	m	struct:genericstrtable	typeref:struct:genericstrtable::genericstrtable	file:
+notice	./lib/usbip_common.h	70;"	d
+now_urb	./lib/stub_driver.h	/^	AsyncURB * now_urb;$/;"	m	struct:usbip_endpoint
+nports	./lib/vhci_driver.h	/^	int nports;$/;"	m	struct:usbip_vhci_driver
+num	./lib/names.c	/^        unsigned int num;$/;"	m	struct:genericstrtable	file:
+num	./lib/usbip_common.c	/^	int num;$/;"	m	struct:portst_string	file:
+num	./lib/usbip_common.c	/^	int num;$/;"	m	struct:speed_string	file:
+number_of_packets	./cmd/stub_server.c	/^	int number_of_packets;  \/* ISO only *\/$/;"	m	struct:usbip_header_ret_submit	file:
+number_of_packets	./cmd/stub_server.c	/^	int number_of_packets;$/;"	m	struct:usbip_header_cmd_submit	file:
+offset	./cmd/stub_server.c	/^	unsigned int offset;$/;"	m	struct:usbip_iso_packet_descriptor	file:
+op_common	./cmd/usbip_network.h	/^struct op_common {$/;"	s
+op_crypkey_reply	./cmd/usbip_network.h	/^struct op_crypkey_reply {$/;"	s
+op_crypkey_request	./cmd/usbip_network.h	/^struct op_crypkey_request {$/;"	s
+op_devinfo_reply	./cmd/usbip_network.h	/^struct op_devinfo_reply {$/;"	s
+op_devinfo_request	./cmd/usbip_network.h	/^struct op_devinfo_request {$/;"	s
+op_devlist_reply	./cmd/usbip_network.h	/^struct op_devlist_reply {$/;"	s
+op_devlist_reply_extra	./cmd/usbip_network.h	/^struct op_devlist_reply_extra {$/;"	s
+op_devlist_request	./cmd/usbip_network.h	/^struct op_devlist_request {$/;"	s
+op_export_reply	./cmd/usbip_network.h	/^struct op_export_reply {$/;"	s
+op_export_request	./cmd/usbip_network.h	/^struct op_export_request {$/;"	s
+op_import_reply	./cmd/usbip_network.h	/^struct op_import_reply {$/;"	s
+op_import_request	./cmd/usbip_network.h	/^struct op_import_request {$/;"	s
+op_unexport_reply	./cmd/usbip_network.h	/^struct op_unexport_reply {$/;"	s
+op_unexport_request	./cmd/usbip_network.h	/^struct op_unexport_request {$/;"	s
+open_usb_interface	./cmd/vhci_attach.c	/^static struct sysfs_device *open_usb_interface(struct usb_device *udev, int i)$/;"	f	file:
+pack_uint16_t	./cmd/usbip_network.c	/^void pack_uint16_t(int pack, uint16_t *num)$/;"	f
+pack_uint32_t	./cmd/usbip_network.c	/^void pack_uint32_t(int pack, uint32_t *num)$/;"	f
+pack_usb_device	./cmd/usbip_network.c	/^void pack_usb_device(int pack, struct usb_device *udev)$/;"	f
+pack_usb_interface	./cmd/usbip_network.c	/^void pack_usb_interface(int pack, struct usb_interface *udev)$/;"	f
+padding	./lib/usbip_common.h	/^	uint8_t padding;	\/* alignment *\/$/;"	m	struct:usb_interface
+parse	./lib/names.c	/^static void parse(FILE *f)$/;"	f	file:
+parse_config	./lib/stub_driver.c	/^static int parse_config(struct usbip_exported_device * edev,$/;"	f	file:
+parse_interface	./lib/stub_driver.c	/^static int parse_interface(struct usbip_exported_device *edev,$/;"	f	file:
+parse_status	./lib/vhci_driver.c	/^static int parse_status(char *value)$/;"	f	file:
+path	./lib/usbip_common.h	/^	char path[SYSFS_PATH_MAX];$/;"	m	struct:usb_device
+physdess	./lib/names.c	/^static struct genericstrtable *physdess[HASHSZ] = { NULL, };$/;"	v	typeref:struct:genericstrtable	file:
+pool	./lib/names.c	/^struct pool {$/;"	s	file:
+pool_head	./lib/names.c	/^static struct pool *pool_head = NULL;$/;"	v	typeref:struct:pool	file:
+port	./lib/vhci_driver.h	/^	uint8_t port;$/;"	m	struct:usbip_imported_device
+portst_string	./lib/usbip_common.c	/^struct portst_string {$/;"	s	file:
+portst_strings	./lib/usbip_common.c	/^static struct portst_string portst_strings[] = {$/;"	v	typeref:struct:portst_string	file:
+prepare_iso_data_iov	./cmd/stub_server.c	/^int prepare_iso_data_iov(struct usbdevfs_urb *urb, struct iovec iov[], int ioc)$/;"	f
+process_client_pdu	./cmd/stub_server.c	/^gboolean process_client_pdu(GIOChannel *gio, GIOCondition condition, gpointer data)$/;"	f
+process_comming_request	./cmd/stub_server.c	/^gboolean process_comming_request(GIOChannel *gio, GIOCondition condition, gpointer data)$/;"	f
+process_device_urb	./cmd/stub_server.c	/^gboolean process_device_urb(GIOChannel *gio, GIOCondition condition, gpointer data)$/;"	f
+processing_urbs	./lib/stub_driver.h	/^	struct dlist * processing_urbs;$/;"	m	struct:usbip_exported_device	typeref:struct:usbip_exported_device::dlist
+product	./lib/names.c	/^struct product {$/;"	s	file:
+productid	./lib/names.c	/^	u_int16_t vendorid, productid;$/;"	m	struct:product	file:
+products	./lib/names.c	/^static struct product *products[HASHSZ] = { NULL, };$/;"	v	typeref:struct:product	file:
+protocol	./lib/names.c	/^struct protocol {$/;"	s	file:
+protocolid	./lib/names.c	/^	u_int8_t classid, subclassid, protocolid;$/;"	m	struct:protocol	file:
+protocols	./lib/names.c	/^static struct protocol *protocols[HASHSZ] = { NULL, };$/;"	v	typeref:struct:protocol	file:
+query_exported_devices	./cmd/vhci_attach.c	/^static int query_exported_devices(int sockfd)$/;"	f	file:
+query_import_device	./cmd/vhci_attach.c	/^static int query_import_device(int sockfd, char *busid)$/;"	f	file:
+read_attr_speed	./lib/usbip_common.c	/^int read_attr_speed(struct sysfs_device *dev)$/;"	f
+read_attr_value	./lib/usbip_common.c	/^int read_attr_value(struct sysfs_device *dev, const char *name, const char *format)$/;"	f
+read_bConfigurationValue	./cmd/utils.c	/^int read_bConfigurationValue(char *busid)$/;"	f
+read_bDeviceClass	./cmd/utils.c	/^int read_bDeviceClass(char *busid)$/;"	f
+read_bNumInterfaces	./cmd/utils.c	/^int read_bNumInterfaces(char *busid)$/;"	f
+read_integer	./cmd/utils.c	/^int read_integer(char *path)$/;"	f
+read_record	./cmd/vhci_attach.c	/^static int read_record(int rhport, char *host, char *port, char *busid)$/;"	f	file:
+read_string	./cmd/utils.c	/^int read_string(char *path, char *string, size_t len)$/;"	f
+read_usb_device	./lib/usbip_common.c	/^int read_usb_device(struct sysfs_device *sdev, struct usb_device *udev)$/;"	f
+read_usb_interface	./lib/usbip_common.c	/^int read_usb_interface(struct usb_device *udev, int i, struct usb_interface *uinf)$/;"	f
+readline	./cmd/utils.c	/^int readline(int sockfd, char *buff, int bufflen)$/;"	f
+record_connection	./cmd/vhci_attach.c	/^static int record_connection(char *host, char *port, char *busid, int rhport)$/;"	f	file:
+recv_client_pdu	./cmd/stub_server.c	/^static int recv_client_pdu(struct usbip_exported_device *edev,int sockfd)$/;"	f	file:
+recv_pdu	./cmd/stub_server.c	/^static int recv_pdu(int sockfd)$/;"	f	file:
+recv_request_devlist	./cmd/stub_server.c	/^static int recv_request_devlist(int sockfd)$/;"	f	file:
+recv_request_export	./cmd/stub_server.c	/^static int recv_request_export(int sockfd)$/;"	f	file:
+recv_request_import	./cmd/stub_server.c	/^static int recv_request_import(int sockfd)$/;"	f	file:
+refresh_class_device_list	./lib/vhci_driver.c	/^static int refresh_class_device_list(void)$/;"	f	file:
+refresh_imported_device_list	./lib/vhci_driver.c	/^static int refresh_imported_device_list(void)$/;"	f	file:
+reports	./lib/names.c	/^static struct genericstrtable *reports[HASHSZ] = { NULL, };$/;"	v	typeref:struct:genericstrtable	file:
+reset_dev	./cmd/stub_server.c	/^static void reset_dev(struct usbip_exported_device *edev, struct usbip_header *req)$/;"	f	file:
+ret_len	./lib/stub_driver.h	/^    unsigned int ret_len;$/;"	m	struct:_AsyncURB
+ret_submit	./cmd/stub_server.c	/^		struct usbip_header_ret_submit	ret_submit;$/;"	m	union:usbip_header::__anon1	typeref:struct:usbip_header::__anon1::usbip_header_ret_submit	file:
+ret_unlink	./cmd/stub_server.c	/^		struct usbip_header_ret_unlink	ret_unlink;$/;"	m	union:usbip_header::__anon1	typeref:struct:usbip_header::__anon1::usbip_header_ret_unlink	file:
+returncode	./cmd/usbip_network.h	/^	int returncode; $/;"	m	struct:op_export_reply
+returncode	./cmd/usbip_network.h	/^	int returncode; $/;"	m	struct:op_unexport_reply
+search_class_for_usbip_device	./lib/vhci_driver.c	/^static int search_class_for_usbip_device(char *cname)$/;"	f	file:
+seek_to_next_desc	./lib/stub_driver.c	/^static void * seek_to_next_desc(void *buf, size_t size, unsigned int * offset,$/;"	f	file:
+send_err_ret_cmd_submit	./cmd/stub_server.c	/^static void send_err_ret_cmd_submit(struct usbip_exported_device *edev,$/;"	f	file:
+send_reply_devlist	./cmd/stub_server.c	/^static int send_reply_devlist(int sockfd)$/;"	f	file:
+seqnum	./cmd/stub_server.c	/^	unsigned int seqnum; \/* URB's seqnum which will be unlinked *\/$/;"	m	struct:usbip_header_cmd_unlink	file:
+seqnum	./cmd/stub_server.c	/^	unsigned int seqnum;$/;"	m	struct:usbip_header_basic	file:
+seqnum	./lib/stub_driver.h	/^    unsigned int seqnum;$/;"	m	struct:_AsyncURB
+set_signal	./cmd/stub_server.c	/^static void set_signal(void)$/;"	f	file:
+setup	./cmd/stub_server.c	/^	unsigned char setup[8];$/;"	m	struct:usbip_header_cmd_submit	file:
+setup_ret_submit_pdu	./cmd/stub_server.c	/^static void setup_ret_submit_pdu(struct usbip_header *rpdu, AsyncURB *aurb)$/;"	f	file:
+show_devices	./cmd/bind-driver.c	/^static int show_devices(void)$/;"	f	file:
+show_devices2	./cmd/bind-driver.c	/^static int show_devices2(void)$/;"	f	file:
+show_eps	./lib/stub_driver.c	/^static void show_eps(struct usbip_exported_device *edev)$/;"	f	file:
+show_exported_devices	./cmd/vhci_attach.c	/^static void show_exported_devices(char *host)$/;"	f	file:
+show_help	./cmd/bind-driver.c	/^static void show_help(void)$/;"	f	file:
+show_help	./cmd/stub_server.c	/^static void show_help(void)$/;"	f	file:
+show_help	./cmd/vhci_attach.c	/^static void show_help(void)$/;"	f	file:
+show_port_status	./cmd/vhci_attach.c	/^static void show_port_status(void)$/;"	f	file:
+show_time	./cmd/stub_server.c	/^void show_time(void)$/;"	f
+signal_handler	./cmd/stub_server.c	/^static void signal_handler(int i)$/;"	f	file:
+special_urb	./cmd/stub_server.c	/^static int special_urb(struct usbip_exported_device *edev, AsyncURB *aurb)$/;"	f	file:
+speed	./lib/usbip_common.c	/^	char *speed;$/;"	m	struct:speed_string	file:
+speed	./lib/usbip_common.h	/^	uint32_t speed;$/;"	m	struct:usb_device
+speed_string	./lib/usbip_common.c	/^struct speed_string {$/;"	s	file:
+speed_strings	./lib/usbip_common.c	/^static const struct speed_string speed_strings[] = {$/;"	v	typeref:struct:speed_string	file:
+start_frame	./cmd/stub_server.c	/^	int start_frame; \/* ISO and INT *\/$/;"	m	struct:usbip_header_ret_submit	file:
+start_frame	./cmd/stub_server.c	/^	int start_frame;$/;"	m	struct:usbip_header_cmd_submit	file:
+status	./cmd/stub_server.c	/^	int status;$/;"	m	struct:usbip_header_ret_submit	file:
+status	./cmd/stub_server.c	/^	int status;$/;"	m	struct:usbip_header_ret_unlink	file:
+status	./cmd/stub_server.c	/^	unsigned int status;$/;"	m	struct:usbip_iso_packet_descriptor	file:
+status	./cmd/usbip_network.h	/^	uint32_t status; \/* op_code status (for reply) *\/$/;"	m	struct:op_common
+status	./lib/stub_driver.h	/^	int32_t status;$/;"	m	struct:usbip_exported_device
+status	./lib/vhci_driver.h	/^	uint32_t status;$/;"	m	struct:usbip_imported_device
+stub_driver	./lib/stub_driver.c	/^struct usbip_stub_driver *stub_driver;$/;"	v	typeref:struct:usbip_stub_driver
+stub_recv_cmd_submit	./cmd/stub_server.c	/^static void stub_recv_cmd_submit(struct usbip_exported_device *edev,$/;"	f	file:
+stub_recv_cmd_unlink	./cmd/stub_server.c	/^static int stub_recv_cmd_unlink(struct usbip_exported_device *edev,$/;"	f	file:
+stub_send_ret_submit	./cmd/stub_server.c	/^static int stub_send_ret_submit(struct usbip_exported_device *edev)$/;"	f	file:
+stub_send_ret_unlink	./cmd/stub_server.c	/^static int stub_send_ret_unlink(int fd, int seqnum, int status)$/;"	f	file:
+sub_seqnum	./lib/stub_driver.h	/^    unsigned int sub_seqnum;$/;"	m	struct:_AsyncURB
+subclass	./lib/names.c	/^struct subclass {$/;"	s	file:
+subclasses	./lib/names.c	/^static struct subclass *subclasses[HASHSZ] = { NULL, };$/;"	v	typeref:struct:subclass	file:
+subclassid	./lib/names.c	/^	u_int8_t classid, subclassid, protocolid;$/;"	m	struct:protocol	file:
+subclassid	./lib/names.c	/^	u_int8_t classid, subclassid;$/;"	m	struct:subclass	file:
+submit_bulk_in_urb	./cmd/stub_server.c	/^int submit_bulk_in_urb(struct usbip_exported_device *edev, AsyncURB *aurb)$/;"	f
+submit_bulk_out_urb	./cmd/stub_server.c	/^int submit_bulk_out_urb(int fd, AsyncURB *aurb, struct dlist * processing_urbs)$/;"	f
+submit_iso_urb	./cmd/stub_server.c	/^int submit_iso_urb(struct usbip_exported_device *edev, AsyncURB *aurb)$/;"	f
+submit_single_urb	./cmd/stub_server.c	/^int submit_single_urb(int fd, AsyncURB *aurb, struct dlist * processing_urbs)$/;"	f
+submit_sub_iso_urb	./cmd/stub_server.c	/^int submit_sub_iso_urb(struct usbip_exported_device *edev,$/;"	f
+sudev	./lib/stub_driver.h	/^	struct sysfs_device *sudev;$/;"	m	struct:usbip_exported_device	typeref:struct:usbip_exported_device::sysfs_device
+sysfs_mntpath	./lib/vhci_driver.h	/^	char sysfs_mntpath[SYSFS_PATH_MAX];$/;"	m	struct:usbip_vhci_driver
+tcp_connect	./cmd/usbip_network.c	/^int tcp_connect(char *hostname, char *service)$/;"	f
+tcpd_auth	./cmd/stub_server.c	/^static int tcpd_auth(int csock)$/;"	f	file:
+termt	./lib/names.c	/^	u_int16_t termt;$/;"	m	struct:audioterminal	file:
+to_string	./lib/usbip_common.h	132;"	d
+transfer_buffer_length	./cmd/stub_server.c	/^	int transfer_buffer_length;$/;"	m	struct:usbip_header_cmd_submit	file:
+transfer_flags	./cmd/stub_server.c	/^	unsigned int transfer_flags;$/;"	m	struct:usbip_header_cmd_submit	file:
+try_submit_sub_urb	./cmd/stub_server.c	/^int try_submit_sub_urb(struct usbip_exported_device *edev, AsyncURB *aurb)$/;"	f
+tweak_clear_halt_cmd	./cmd/stub_server.c	/^static int tweak_clear_halt_cmd(int fd, AsyncURB * aurb)$/;"	f	file:
+tweak_reset_device_cmd	./cmd/stub_server.c	/^static int tweak_reset_device_cmd(int fd, AsyncURB *aurb)$/;"	f	file:
+tweak_set_configuration_cmd	./cmd/stub_server.c	/^static int tweak_set_configuration_cmd(int fd, AsyncURB *aurb)$/;"	f	file:
+tweak_set_interface_cmd	./cmd/stub_server.c	/^static int tweak_set_interface_cmd(struct usbip_exported_device *edev,$/;"	f	file:
+type	./lib/stub_driver.h	/^	unsigned char type;$/;"	m	struct:usbip_endpoint
+u	./cmd/stub_server.c	/^	} u;$/;"	m	struct:usbip_header	typeref:union:usbip_header::__anon1	file:
+udev	./cmd/usbip_network.h	/^	struct usb_device    udev;$/;"	m	struct:op_devlist_reply_extra	typeref:struct:op_devlist_reply_extra::usb_device
+udev	./cmd/usbip_network.h	/^	struct usb_device udev;$/;"	m	struct:op_devinfo_reply	typeref:struct:op_devinfo_reply::usb_device
+udev	./cmd/usbip_network.h	/^	struct usb_device udev;$/;"	m	struct:op_export_request	typeref:struct:op_export_request::usb_device
+udev	./cmd/usbip_network.h	/^	struct usb_device udev;$/;"	m	struct:op_import_reply	typeref:struct:op_import_reply::usb_device
+udev	./cmd/usbip_network.h	/^	struct usb_device udev;$/;"	m	struct:op_unexport_request	typeref:struct:op_unexport_request::usb_device
+udev	./lib/stub_driver.h	/^	struct usb_device    udev;$/;"	m	struct:usbip_exported_device	typeref:struct:usbip_exported_device::usb_device
+udev	./lib/vhci_driver.h	/^	struct usb_device udev;$/;"	m	struct:usbip_imported_device	typeref:struct:usbip_imported_device::usb_device
+uinf	./cmd/usbip_network.h	/^	struct usb_interface uinf[];$/;"	m	struct:op_devinfo_reply	typeref:struct:op_devinfo_reply::usb_interface
+uinf	./cmd/usbip_network.h	/^	struct usb_interface uinf[];$/;"	m	struct:op_devlist_reply_extra	typeref:struct:op_devlist_reply_extra::usb_interface
+uinf	./lib/stub_driver.h	/^	struct usb_interface uinf[];$/;"	m	struct:usbip_exported_device	typeref:struct:usbip_exported_device::usb_interface
+un_imported_dev	./cmd/stub_server.c	/^void un_imported_dev(struct usbip_exported_device *edev)$/;"	f
+unbind_interface_busid	./cmd/bind-driver.c	/^static int unbind_interface_busid(char *busid)$/;"	f	file:
+unbind_path_format	./cmd/bind-driver.c	/^static const char unbind_path_format[] = "\/sys\/bus\/usb\/devices\/%s\/driver\/unbind";$/;"	v	file:
+unexport_device	./lib/stub_driver.c	/^void unexport_device(struct usbip_exported_device * deleted_edev)$/;"	f
+urb	./lib/stub_driver.h	/^    struct usbdevfs_urb urb;$/;"	m	struct:_AsyncURB	typeref:struct:_AsyncURB::usbdevfs_urb
+usb_device	./lib/usbip_common.h	/^struct usb_device {$/;"	s
+usb_host_claim_interfaces	./lib/stub_driver.c	/^static int usb_host_claim_interfaces(struct usbip_exported_device *edev)$/;"	f	file:
+usb_host_device_path	./lib/stub_driver.c	287;"	d	file:
+usb_interface	./lib/usbip_common.h	/^struct usb_interface {$/;"	s
+usb_parse_desc	./lib/stub_driver.c	/^static int usb_parse_desc(struct usbip_exported_device *edev, int config_v)$/;"	f	file:
+usbfs_fd	./lib/stub_driver.h	/^	int usbfs_fd;$/;"	m	struct:usbip_exported_device
+usbfs_gio_id	./lib/stub_driver.h	/^	int usbfs_gio_id;$/;"	m	struct:usbip_exported_device
+usbip_device_status	./lib/usbip_common.h	/^enum usbip_device_status{$/;"	g
+usbip_dump_header	./cmd/stub_server.c	/^static void usbip_dump_header(struct usbip_header *pdu)$/;"	f	file:
+usbip_endpoint	./lib/stub_driver.h	/^struct usbip_endpoint {$/;"	s
+usbip_exported_device	./lib/stub_driver.h	/^struct usbip_exported_device {$/;"	s
+usbip_exported_device_delete	./lib/stub_driver.c	/^static void usbip_exported_device_delete(void *dev)$/;"	f	file:
+usbip_exported_device_new	./lib/stub_driver.c	/^static struct usbip_exported_device *usbip_exported_device_new(char *sdevpath)$/;"	f	file:
+usbip_header	./cmd/stub_server.c	/^struct usbip_header {$/;"	s	file:
+usbip_header_basic	./cmd/stub_server.c	/^struct usbip_header_basic {$/;"	s	file:
+usbip_header_cmd_submit	./cmd/stub_server.c	/^struct usbip_header_cmd_submit {$/;"	s	file:
+usbip_header_cmd_unlink	./cmd/stub_server.c	/^struct usbip_header_cmd_unlink {$/;"	s	file:
+usbip_header_correct_endian	./cmd/stub_server.c	/^void usbip_header_correct_endian(struct usbip_header *pdu, int send)$/;"	f
+usbip_header_ret_submit	./cmd/stub_server.c	/^struct usbip_header_ret_submit {$/;"	s	file:
+usbip_header_ret_unlink	./cmd/stub_server.c	/^struct usbip_header_ret_unlink {$/;"	s	file:
+usbip_imported_device	./lib/vhci_driver.h	/^struct usbip_imported_device {$/;"	s
+usbip_iso_packet_descriptor	./cmd/stub_server.c	/^struct usbip_iso_packet_descriptor {$/;"	s	file:
+usbip_names_free	./lib/usbip_common.c	/^void usbip_names_free()$/;"	f
+usbip_names_get_class	./lib/usbip_common.c	/^void usbip_names_get_class(char *buff, size_t size, uint8_t class, uint8_t subclass, uint8_t protocol)$/;"	f
+usbip_names_get_product	./lib/usbip_common.c	/^void usbip_names_get_product(char *buff, size_t size, uint16_t vendor, uint16_t product)$/;"	f
+usbip_names_init	./lib/usbip_common.c	/^int usbip_names_init(char *f)$/;"	f
+usbip_recv	./cmd/usbip_network.c	/^ssize_t usbip_recv(int sockfd, void *buff, size_t bufflen)$/;"	f
+usbip_recv_op_common	./cmd/usbip_network.c	/^int usbip_recv_op_common(int sockfd, uint16_t *code)$/;"	f
+usbip_recvv	./cmd/usbip_network.h	188;"	d
+usbip_refresh_eps	./lib/stub_driver.c	/^int usbip_refresh_eps(struct usbip_exported_device *edev, int inf, int alter)$/;"	f
+usbip_send	./cmd/usbip_network.c	/^ssize_t usbip_send(int sockfd, void *buff, size_t bufflen)$/;"	f
+usbip_send_op_common	./cmd/usbip_network.c	/^int usbip_send_op_common(int sockfd, uint32_t code, uint32_t status)$/;"	f
+usbip_sendv	./cmd/usbip_network.h	187;"	d
+usbip_set_keepalive	./cmd/usbip_network.c	/^int usbip_set_keepalive(int sockfd)$/;"	f
+usbip_set_nodelay	./cmd/usbip_network.c	/^int usbip_set_nodelay(int sockfd)$/;"	f
+usbip_set_reuseaddr	./cmd/usbip_network.c	/^int usbip_set_reuseaddr(int sockfd)$/;"	f
+usbip_speed_string	./lib/usbip_common.c	/^const char *usbip_speed_string(int num)$/;"	f
+usbip_status_string	./lib/usbip_common.c	/^const char *usbip_status_string(int32_t status)$/;"	f
+usbip_stub_driver	./lib/stub_driver.h	/^struct usbip_stub_driver {$/;"	s
+usbip_stub_driver_close	./lib/stub_driver.c	/^void usbip_stub_driver_close(void)$/;"	f
+usbip_stub_driver_open	./lib/stub_driver.c	/^int usbip_stub_driver_open(void)$/;"	f
+usbip_stub_get_device	./lib/stub_driver.c	/^struct usbip_exported_device *usbip_stub_get_device(int num)$/;"	f
+usbip_use_debug	./lib/usbip_common.c	/^int usbip_use_debug  = 0;$/;"	v
+usbip_use_stderr	./lib/usbip_common.c	/^int usbip_use_stderr = 0;$/;"	v
+usbip_use_syslog	./lib/usbip_common.c	/^int usbip_use_syslog = 0;$/;"	v
+usbip_vhci_attach_device	./lib/vhci_driver.c	/^int usbip_vhci_attach_device(uint8_t port, int sockfd, uint8_t busnum,$/;"	f
+usbip_vhci_attach_device2	./lib/vhci_driver.c	/^int usbip_vhci_attach_device2(uint8_t port, int sockfd, uint32_t devid,$/;"	f
+usbip_vhci_detach_device	./lib/vhci_driver.c	/^int usbip_vhci_detach_device(uint8_t port)$/;"	f
+usbip_vhci_driver	./lib/vhci_driver.h	/^struct usbip_vhci_driver {$/;"	s
+usbip_vhci_driver_close	./lib/vhci_driver.c	/^void usbip_vhci_driver_close()$/;"	f
+usbip_vhci_driver_open	./lib/vhci_driver.c	/^int usbip_vhci_driver_open(void)$/;"	f
+usbip_vhci_get_free_port	./lib/vhci_driver.c	/^int usbip_vhci_get_free_port(void)$/;"	f
+usbip_vhci_imported_device_dump	./cmd/vhci_attach.c	/^void usbip_vhci_imported_device_dump(struct usbip_imported_device *idev)$/;"	f
+usbip_vhci_refresh_device_list	./lib/vhci_driver.c	/^int usbip_vhci_refresh_device_list(void)$/;"	f
+usbip_xmit	./cmd/usbip_network.c	/^static ssize_t usbip_xmit(int sockfd, void *buff, size_t bufflen, int sending)$/;"	f	file:
+usbip_xmitv	./cmd/usbip_network.c	/^ssize_t usbip_xmitv(int sockfd, struct iovec *iov, int io_count, int sending)$/;"	f
+use_device_by_other	./cmd/bind-driver.c	/^static int use_device_by_other(char *busid)$/;"	f	file:
+use_device_by_usbip	./cmd/bind-driver.c	/^static int use_device_by_usbip(char *busid)$/;"	f	file:
+valid	./lib/stub_driver.h	/^	unsigned char valid;$/;"	m	struct:usbip_endpoint
+valid_request	./cmd/stub_server.c	/^static int valid_request(struct usbip_exported_device *edev, $/;"	f	file:
+vendor	./lib/names.c	/^struct vendor {$/;"	s	file:
+vendorid	./lib/names.c	/^	u_int16_t vendorid, productid;$/;"	m	struct:product	file:
+vendorid	./lib/names.c	/^	u_int16_t vendorid;$/;"	m	struct:vendor	file:
+vendors	./lib/names.c	/^static struct vendor *vendors[HASHSZ] = { NULL, };$/;"	v	typeref:struct:vendor	file:
+version	./cmd/stub_server.c	/^static const char version[] = PACKAGE_STRING$/;"	v	file:
+version	./cmd/usbip_network.h	/^	uint16_t version;$/;"	m	struct:op_common
+version	./cmd/vhci_attach.c	/^static const char version[] = PACKAGE_STRING$/;"	v	file:
+vhci_driver	./lib/vhci_driver.c	/^struct usbip_vhci_driver *vhci_driver;$/;"	v	typeref:struct:usbip_vhci_driver
+vhci_driver_name	./lib/vhci_driver.c	/^static const char vhci_driver_name[] = "vhci_hcd";$/;"	v	file:
+waited_urbs	./lib/stub_driver.h	/^	struct dlist * waited_urbs;$/;"	m	struct:usbip_endpoint	typeref:struct:usbip_endpoint::dlist
+write_bConfigurationValue	./cmd/utils.c	/^int write_bConfigurationValue(char *busid, int config)$/;"	f
+write_integer	./cmd/utils.c	/^int write_integer(char *path, int value)$/;"	f
+writeline	./cmd/utils.c	/^int writeline(int sockfd, char *str, int strlen)$/;"	f

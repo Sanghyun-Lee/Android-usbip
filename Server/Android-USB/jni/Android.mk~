@@ -1,0 +1,8 @@
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+LOCAL_MODULE := ndk-usbip
+LOCAL_SHARED_LIBRARIES := usbipd \
+LOCAL_STATIC_LIBRARIES := lib_usbipd \
+			libglib_static \
+			libsysfsd
+include $(BUILD_SHARED_LIBRARY)

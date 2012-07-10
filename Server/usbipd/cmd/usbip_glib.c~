@@ -1,0 +1,675 @@
+
+typedef char   gchar;
+typedef short  gshort;
+typedef long   glong;
+typedef int    gint;
+typedef gint   gboolean;
+
+typedef unsigned char   guchar;
+typedef unsigned short  gushort;
+typedef unsigned long   gulong;
+typedef unsigned int    guint;
+
+typedef float   gfloat;
+typedef double  gdouble;
+
+typedef void* gpointer;
+
+typedef struct _GSList GSList;
+typedef struct _GPollFD GPollFD;
+typedef gint	(*GPollFunc)	(GPollFD *ufds,
+				 guint	  nfsd,
+				 gint     timeout_);
+
+typedef struct _GPollFD GPollFD;
+typedef gint	(*GPollFunc)	(GPollFD *ufds,
+				 guint	  nfsd,
+				 gint     timeout_);
+
+typedef gboolean (*GSourceFunc)       (gpointer data);
+
+
+typedef struct _GCond           GCond;
+typedef struct _GPtrArray	GPtrArray;
+typedef struct _GSource	                GSource;
+typedef struct _GSourceFuncs	        GSourceFuncs;
+typedef struct _GSourceCallbackFuncs	GSourceCallbackFuncs;
+typedef struct _GMainLoop	GMainLoop;
+typedef struct _GMainContext	        GMainContext;	/* Opaque */
+
+
+typedef struct _GThread         GThread;
+
+typedef struct _GPollRec GPollRec;
+
+typedef gpointer (*GThreadFunc) (gpointer data);
+
+typedef enum
+{
+  G_THREAD_PRIORITY_LOW,
+  G_THREAD_PRIORITY_NORMAL,
+  G_THREAD_PRIORITY_HIGH,
+  G_THREAD_PRIORITY_URGENT
+} GThreadPriority;
+
+
+struct _GPollFD
+{
+#if defined (G_OS_WIN32) && GLIB_SIZEOF_VOID_P == 8
+  gint64	fd;
+#else
+  gint		fd;
+#endif
+  gushort 	events;
+  gushort 	revents;
+};
+
+struct _GSList
+{
+  gpointer data;
+  GSList *next;
+};
+struct _GPollRec
+{
+  GPollFD *fd;
+  GPollRec *next;
+  gint priority;
+};
+
+struct  _GThread
+{
+  /*< private >*/
+  GThreadFunc func;
+  gpointer data;
+  gboolean joinable;
+  GThreadPriority priority;
+};
+
+
+typedef enum
+{
+  G_IO_IN	GLIB_SYSDEF_POLLIN,
+  G_IO_OUT	GLIB_SYSDEF_POLLOUT,
+  G_IO_PRI	GLIB_SYSDEF_POLLPRI,
+  G_IO_ERR	GLIB_SYSDEF_POLLERR,
+  G_IO_HUP	GLIB_SYSDEF_POLLHUP,
+  G_IO_NVAL	GLIB_SYSDEF_POLLNVAL
+} GIOCondition;
+
+gpointer g_slice_alloc          	(gsize	       block_size) G_GNUC_MALLOC;
+
+#define  g_slice_new(type)      ((type*) g_slice_alloc (sizeof (type)))
+#define g_thread_supported()    (g_threads_got_initialized)
+#define G_WIN32_MSG_HANDLE 19981206
+#define _g_slist_alloc()        g_slice_new (GSList)
+
+
+typedef void (*GSourceDummyMarshal) (void);
+
+
+struct _GCond
+{
+  GPtrArray *array;
+  CRITICAL_SECTION lock;
+};
+
+struct _GPtrArray
+{
+  gpointer *pdata;
+  guint	    len;
+};
+
+struct _GSource
+{
+  /*< private >*/
+  gpointer callback_data;
+  GSourceCallbackFuncs *callback_funcs;
+
+  GSourceFuncs *source_funcs;
+  guint ref_count;
+
+  GMainContext *context;
+
+  gint priority;
+  guint flags;
+  guint source_id;
+
+  GSList *poll_fds;
+  
+  GSource *prev;
+  GSource *next;
+
+  gpointer reserved1;
+  gpointer reserved2;
+};
+
+
+static GMainContext *default_main_context;
+
+typedef struct _GTimeVal                GTimeVal;
+
+struct _GTimeVal
+{
+  glong tv_sec;
+  glong tv_usec;
+};
+
+
+struct _GMainContext
+{
+#ifdef G_THREADS_ENABLED
+  /* The following lock is used for both the list of sources
+   * and the list of poll records
+   */
+  GStaticMutex mutex;
+  GCond *cond;
+  GThread *owner;
+  guint owner_count;
+  GSList *waiters;
+#endif  
+
+  gint ref_count;
+
+  GPtrArray *pending_dispatches;
+  gint timeout;			/* Timeout for current iteration */
+
+  guint next_id;
+  GSource *source_list;
+  gint in_check_or_prepare;
+
+  GPollRec *poll_records;
+  guint n_poll_records;
+  GPollFD *cached_poll_array;
+  guint cached_poll_array_size;
+
+#ifdef G_THREADS_ENABLED  
+#ifndef G_OS_WIN32
+/* this pipe is used to wake up the main loop when a source is added.
+ */
+  gint wake_up_pipe[2];
+#else /* G_OS_WIN32 */
+  HANDLE wake_up_semaphore;
+#endif /* G_OS_WIN32 */
+
+  GPollFD wake_up_rec;
+  gboolean poll_waiting;
+
+/* Flag indicating whether the set of fd's changed during a poll */
+  gboolean poll_changed;
+#endif /* G_THREADS_ENABLED */
+
+  GPollFunc poll_func;
+
+  GTimeVal current_time;
+  gboolean time_is_current;
+};
+
+#ifndef G_ERRORCHECK_MUTEXES
+# define g_mutex_lock(mutex)						\
+    G_THREAD_CF (mutex_lock,     (void)0, (mutex))
+# define g_mutex_trylock(mutex)						\
+    G_THREAD_CF (mutex_trylock,  TRUE,    (mutex))
+# define g_mutex_unlock(mutex)						\
+    G_THREAD_CF (mutex_unlock,   (void)0, (mutex))
+# define g_mutex_free(mutex)						\
+    G_THREAD_CF (mutex_free,     (void)0, (mutex))
+# define g_cond_wait(cond, mutex)					\
+    G_THREAD_CF (cond_wait,      (void)0, (cond, mutex))
+# define g_cond_timed_wait(cond, mutex, abs_time)			\
+    G_THREAD_CF (cond_timed_wait, TRUE,   (cond, mutex, abs_time))
+#else /* G_ERRORCHECK_MUTEXES */
+# define g_mutex_lock(mutex)						\
+    G_THREAD_ECF (mutex_lock,    (void)0, (mutex), void)
+# define g_mutex_trylock(mutex)						\
+    G_THREAD_ECF (mutex_trylock, TRUE,    (mutex), gboolean)
+# define g_mutex_unlock(mutex)						\
+    G_THREAD_ECF (mutex_unlock,  (void)0, (mutex), void)
+# define g_mutex_free(mutex)						\
+    G_THREAD_ECF (mutex_free,    (void)0, (mutex), void)
+# define g_cond_wait(cond, mutex)					\
+    (g_thread_supported () ? ((void(*)(GCond*, GMutex*, gulong, gchar*))\
+      g_thread_functions_for_glib_use.cond_wait)			\
+        (cond, mutex, G_MUTEX_DEBUG_MAGIC, G_STRLOC) : (void) 0)
+# define g_cond_timed_wait(cond, mutex, abs_time)			\
+    (g_thread_supported () ?						\
+      ((gboolean(*)(GCond*, GMutex*, GTimeVal*, gulong, gchar*))	\
+        g_thread_functions_for_glib_use.cond_timed_wait)		\
+          (cond, mutex, abs_time, G_MUTEX_DEBUG_MAGIC, G_STRLOC) : TRUE)
+#endif /* G_ERRORCHECK_MUTEXES */
+
+static GSList *main_contexts_without_pipe = NULL;
+
+
+
+
+
+struct _GMainLoop
+{
+  GMainContext *context;
+  gboolean is_running;
+  gint ref_count;
+};
+
+struct _GSourceFuncs
+{
+  gboolean (*prepare)  (GSource    *source,
+			gint       *timeout_);
+  gboolean (*check)    (GSource    *source);
+  gboolean (*dispatch) (GSource    *source,
+			GSourceFunc callback,
+			gpointer    user_data);
+  void     (*finalize) (GSource    *source); /* Can be NULL */
+
+  /* For use by g_source_set_closure */
+  GSourceFunc     closure_callback;	   
+  GSourceDummyMarshal closure_marshal; /* Really is of type GClosureMarshal */
+};
+
+struct _GSourceCallbackFuncs
+{
+  void (*ref)   (gpointer     cb_data);
+  void (*unref) (gpointer     cb_data);
+  void (*get)   (gpointer     cb_data,
+		 GSource     *source, 
+		 GSourceFunc *func,
+		 gpointer    *data);
+};
+
+static GSList *main_context_list = NULL;
+
+#ifndef G_ERRORCHECK_MUTEXES
+# define g_mutex_lock(mutex)						\
+    G_THREAD_CF (mutex_lock,     (void)0, (mutex))
+#else /* G_ERRORCHECK_MUTEXES */
+# define g_mutex_lock(mutex)						\
+    G_THREAD_ECF (mutex_lock,    (void)0, (mutex), void)
+#endif /* G_ERRORCHECK_MUTEXES */
+
+#define g_atomic_int_inc(atomic) (g_atomic_int_add ((atomic), 1))
+
+
+#ifdef  G_THREADS_ENABLED
+#  define G_LOCK_DEFINE_STATIC(name)    static G_LOCK_DEFINE (name)
+#  define G_LOCK_DEFINE(name)           \
+    GStaticMutex G_LOCK_NAME (name) = G_STATIC_MUTEX_INIT
+#  define G_LOCK_EXTERN(name)           extern GStaticMutex G_LOCK_NAME (name)
+
+#  ifdef G_DEBUG_LOCKS
+#    define G_LOCK(name)                G_STMT_START{             \
+        g_log (G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG,                   \
+               "file %s: line %d (%s): locking: %s ",             \
+               __FILE__,        __LINE__, G_GNUC_PRETTY_FUNCTION, \
+               #name);                                            \
+        g_static_mutex_lock (&G_LOCK_NAME (name));                \
+     }G_STMT_END
+#    define G_UNLOCK(name)              G_STMT_START{             \
+        g_log (G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG,                   \
+               "file %s: line %d (%s): unlocking: %s ",           \
+               __FILE__,        __LINE__, G_GNUC_PRETTY_FUNCTION, \
+               #name);                                            \
+       g_static_mutex_unlock (&G_LOCK_NAME (name));               \
+     }G_STMT_END
+#    define G_TRYLOCK(name)                                       \
+        (g_log (G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG,                  \
+               "file %s: line %d (%s): try locking: %s ",         \
+               __FILE__,        __LINE__, G_GNUC_PRETTY_FUNCTION, \
+               #name), g_static_mutex_trylock (&G_LOCK_NAME (name)))
+#  else  /* !G_DEBUG_LOCKS */
+#    define G_LOCK(name) g_static_mutex_lock       (&G_LOCK_NAME (name))
+#    define G_UNLOCK(name) g_static_mutex_unlock   (&G_LOCK_NAME (name))
+#    define G_TRYLOCK(name) g_static_mutex_trylock (&G_LOCK_NAME (name))
+#  endif /* !G_DEBUG_LOCKS */
+#else   /* !G_THREADS_ENABLED */
+#  define G_LOCK_DEFINE_STATIC(name)    extern void glib_dummy_decl (void)
+#  define G_LOCK_DEFINE(name)           extern void glib_dummy_decl (void)
+#  define G_LOCK_EXTERN(name)           extern void glib_dummy_decl (void)
+#  define G_LOCK(name)
+#  define G_UNLOCK(name)
+#  define G_TRYLOCK(name)               (TRUE)
+#endif  /* !G_THREADS_ENABLED */
+
+
+
+void
+g_static_mutex_init (GStaticMutex *mutex)
+{
+	static const GStaticMutex init_mutex = G_STATIC_MUTEX_INIT;
+
+	g_return_if_fail (mutex);
+
+	*mutex = init_mutex;
+}
+
+/* HOLDS: context's lock */
+/* Wake the main loop up from a poll() */
+static void
+g_main_context_wakeup_unlocked (GMainContext *context)
+{
+#ifdef G_THREADS_ENABLED
+  if (g_thread_supported() && context->poll_waiting)
+    {
+      context->poll_waiting = FALSE;
+#ifndef G_OS_WIN32
+      write (context->wake_up_pipe[1], "A", 1);
+#else
+      ReleaseSemaphore (context->wake_up_semaphore, 1, NULL);
+#endif
+    }
+#endif
+}
+
+
+
+/* HOLDS: main_loop_lock */
+static void 
+g_main_context_add_poll_unlocked (GMainContext *context,
+				  gint          priority,
+				  GPollFD      *fd)
+{
+  GPollRec *lastrec, *pollrec;
+  GPollRec *newrec = g_slice_new (GPollRec);
+
+  /* This file descriptor may be checked before we ever poll */
+  fd->revents = 0;
+  newrec->fd = fd;
+  newrec->priority = priority;
+
+  lastrec = NULL;
+  pollrec = context->poll_records;
+  while (pollrec && priority >= pollrec->priority)
+    {
+      lastrec = pollrec;
+      pollrec = pollrec->next;
+    }
+  
+  if (lastrec)
+    lastrec->next = newrec;
+  else
+    context->poll_records = newrec;
+
+  newrec->next = pollrec;
+
+  context->n_poll_records++;
+
+#ifdef G_THREADS_ENABLED
+  context->poll_changed = TRUE;
+
+  /* Now wake up the main loop if it is waiting in the poll() */
+  g_main_context_wakeup_unlocked (context);
+#endif
+}
+
+
+#ifdef G_THREADS_ENABLED
+static void 
+g_main_context_init_pipe (GMainContext *context)
+{
+/*# ifndef G_OS_WIN32
+  if (context->wake_up_pipe[0] != -1)
+    return;
+  if (pipe (context->wake_up_pipe) < 0)
+    g_error ("Cannot create pipe main loop wake-up: %s\n",
+	     g_strerror (errno));
+  
+  context->wake_up_rec.fd = context->wake_up_pipe[0];
+  context->wake_up_rec.events = G_IO_IN;
+# else
+*/
+  if (context->wake_up_semaphore != NULL)
+    return;
+  context->wake_up_semaphore = CreateSemaphore (NULL, 0, 100, NULL);
+  if (context->wake_up_semaphore == NULL)
+    g_error ("Cannot create wake-up semaphore: %s",
+	     g_win32_error_message (GetLastError ()));
+  context->wake_up_rec.fd = (gint) context->wake_up_semaphore;
+  context->wake_up_rec.events = G_IO_IN;
+#  ifdef G_MAIN_POLL_DEBUG
+  g_print ("wake-up semaphore: %#x\n", (guint) context->wake_up_semaphore);
+#  endif
+# endif
+  g_main_context_add_poll_unlocked (context, 0, &context->wake_up_rec);
+}
+
+
+/* --- API functions --- */
+gpointer
+g_slice_alloc (gsize mem_size)
+{
+  gsize chunk_size;
+  gpointer mem;
+  guint acat;
+  chunk_size = P2ALIGN (mem_size);
+  acat = allocator_categorize (chunk_size);
+  if (G_LIKELY (acat == 1))     /* allocate through magazine layer */
+    {
+      ThreadMemory *tmem = thread_memory_from_self();
+      guint ix = SLAB_INDEX (allocator, chunk_size);
+      if (G_UNLIKELY (thread_memory_magazine1_is_empty (tmem, ix)))
+        {
+          thread_memory_swap_magazines (tmem, ix);
+          if (G_UNLIKELY (thread_memory_magazine1_is_empty (tmem, ix)))
+            thread_memory_magazine1_reload (tmem, ix);
+        }
+      mem = thread_memory_magazine1_alloc (tmem, ix);
+    }
+  else if (acat == 2)           /* allocate through slab allocator */
+    {
+      g_mutex_lock (allocator->slab_mutex);
+      mem = slab_allocator_alloc_chunk (chunk_size);
+      g_mutex_unlock (allocator->slab_mutex);
+    }
+  else                          /* delegate to system malloc */
+    mem = g_malloc (mem_size);
+  if (G_UNLIKELY (allocator->config.debug_blocks))
+    smc_notify_alloc (mem, mem_size);
+  return mem;
+}
+
+
+
+GSList*
+g_slist_append (GSList   *list,
+		gpointer  data)
+{
+  GSList *new_list;
+  GSList *last;
+
+  new_list = _g_slist_alloc ();
+  new_list->data = data;
+  new_list->next = NULL;
+
+  if (list)
+    {
+      last = g_slist_last (list);
+      /* g_assert (last != NULL); */
+      last->next = new_list;
+
+      return list;
+    }
+  else
+    return new_list;
+}
+#ifdef HAVE_POLL
+/* SunOS has poll, but doesn't provide a prototype. */
+#  if defined (sun) && !defined (__SVR4)
+extern gint poll (GPollFD *ufds, guint nfsd, gint timeout);
+#  endif  /* !sun */
+#else	/* !HAVE_POLL */
+
+
+static gint 
+g_poll (GPollFD *fds,
+	guint    nfds,
+	gint     timeout)
+{
+  struct timeval tv;
+  SELECT_MASK rset, wset, xset;
+  GPollFD *f;
+  int ready;
+  int maxfd = 0;
+
+  FD_ZERO (&rset);
+  FD_ZERO (&wset);
+  FD_ZERO (&xset);
+
+  for (f = fds; f < &fds[nfds]; ++f)
+    if (f->fd >= 0)
+      {
+	if (f->events & G_IO_IN)
+	  FD_SET (f->fd, &rset);
+	if (f->events & G_IO_OUT)
+	  FD_SET (f->fd, &wset);
+	if (f->events & G_IO_PRI)
+	  FD_SET (f->fd, &xset);
+	if (f->fd > maxfd && (f->events & (G_IO_IN|G_IO_OUT|G_IO_PRI)))
+	  maxfd = f->fd;
+      }
+
+  tv.tv_sec = timeout / 1000;
+  tv.tv_usec = (timeout % 1000) * 1000;
+
+  ready = select (maxfd + 1, &rset, &wset, &xset,
+		  timeout == -1 ? NULL : &tv);
+  if (ready > 0)
+    for (f = fds; f < &fds[nfds]; ++f)
+      {
+	f->revents = 0;
+	if (f->fd >= 0)
+	  {
+	    if (FD_ISSET (f->fd, &rset))
+	      f->revents |= G_IO_IN;
+	    if (FD_ISSET (f->fd, &wset))
+	      f->revents |= G_IO_OUT;
+	    if (FD_ISSET (f->fd, &xset))
+	      f->revents |= G_IO_PRI;
+	  }
+      }
+
+  return ready;
+}
+
+
+
+
+GMainContext *
+g_main_context_new (void)
+{
+	GMainContext *context = g_new0 (GMainContext, 1);
+
+#ifdef G_THREADS_ENABLED
+	g_static_mutex_init (&context->mutex);
+
+	context->owner = NULL;
+	context->waiters = NULL;
+
+# ifndef G_OS_WIN32
+	context->wake_up_pipe[0] = -1;
+	context->wake_up_pipe[1] = -1;
+# else
+	context->wake_up_semaphore = NULL;
+# endif
+#endif
+
+	context->ref_count = 1;
+
+	context->next_id = 1;
+
+	context->source_list = NULL;
+
+#if HAVE_POLL
+	context->poll_func = (GPollFunc)poll;
+#else
+	context->poll_func = g_poll;
+#endif
+
+	context->cached_poll_array = NULL;
+	context->cached_poll_array_size = 0;
+
+	context->pending_dispatches = g_ptr_array_new ();
+
+	context->time_is_current = FALSE;
+
+#ifdef G_THREADS_ENABLED
+	if (g_thread_supported ())
+		g_main_context_init_pipe (context);
+	else
+		main_contexts_without_pipe = g_slist_prepend (main_contexts_without_pipe, 
+		context);
+#endif
+
+	G_LOCK (main_context_list);
+	main_context_list = g_slist_append (main_context_list, context);
+	G_UNLOCK (main_context_list);
+
+	return context;
+}
+
+GMainContext *
+g_main_context_default (void)
+{
+	/* Slow, but safe */
+
+	G_LOCK (main_loop);
+
+	if (!default_main_context)
+		default_main_context = g_main_context_new ();
+
+	G_UNLOCK (main_loop);
+
+	return default_main_context;
+}
+
+
+#ifdef G_ATOMIC_OP_MEMORY_BARRIER_NEEDED
+gint
+g_atomic_int_get (volatile gint *atomic)
+{
+  gint result;
+
+  g_mutex_lock (g_atomic_mutex);
+  result = *atomic;
+  g_mutex_unlock (g_atomic_mutex);
+
+  return result;
+}
+#endif /* G_ATOMIC_OP_MEMORY_BARRIER_NEEDED */   
+#elif defined (G_ATOMIC_OP_MEMORY_BARRIER_NEEDED)
+gint
+g_atomic_int_get (volatile gint *atomic)
+{
+  G_ATOMIC_MEMORY_BARRIER;
+  return *atomic;
+}
+
+
+
+GMainContext *
+g_main_context_ref (GMainContext *context)
+{
+  g_return_val_if_fail (context != NULL, NULL);
+  g_return_val_if_fail (g_atomic_int_get (&context->ref_count) > 0, NULL); 
+
+  g_atomic_int_inc (&context->ref_count);
+
+  return context;
+}
+
+
+GMainLoop *
+g_main_loop_new (GMainContext *context,
+				 gboolean      is_running)
+{
+	GMainLoop *loop;
+
+	if (!context)
+		context = g_main_context_default();
+
+	g_main_context_ref (context);
+
+	loop = g_new0 (GMainLoop, 1);
+	loop->context = context;
+	loop->is_running = is_running != FALSE;
+	loop->ref_count = 1;
+
+	return loop;
+}

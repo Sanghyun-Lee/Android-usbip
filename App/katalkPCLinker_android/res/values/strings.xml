@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalk PCLinker</string><string name="ime_name">한글입력기(kandroid)</string><string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string><string name="label_go_key">Go</string><string name="label_next_key">Next</string><string name="label_send_key">Send</string>
+
+</resources>

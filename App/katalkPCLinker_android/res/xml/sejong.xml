@@ -1,0 +1,37 @@
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="@dimen/key_height"
+    >
+    <Row>
+        <Key android:codes="74" android:keyLabel="\u3163" android:keyWidth="25%p"/> ㅣ
+        <Key android:codes="75" android:keyLabel="\u318D" android:keyWidth="25%p"/>  .          
+        <Key android:codes="76" android:keyLabel="\u3161" android:keyWidth="25%p"/>  ㅡ  
+        <Key android:codes="-5" android:keyIcon="@drawable/sym_keyboard_delete"
+                android:keyWidth="25%p" android:keyEdgeFlags="right"
+                android:isRepeatable="true"/>    
+	</Row>    
+    <Row>
+        <Key android:codes="65" android:keyLabel="\u3131\u314b\u3132" android:keyWidth="25%p"/> ㄱ ㅋ ㄲ
+        <Key android:codes="66" android:keyLabel=" \u3134 " android:keyWidth="25%p"/> ㄴ 
+        <Key android:codes="67" android:keyLabel="\u3137\u314c\u3138" android:keyWidth="25%p"/> ㄷ ㅌ ㄸ
+        <Key android:codes="32" android:keyIcon="@drawable/sym_keyboard_space"
+                android:keyWidth="25%p" android:isRepeatable="true"/>
+    </Row> 
+    
+    <Row>
+        <Key android:codes="68" android:keyLabel=" \u3139 " android:keyWidth="25%p"/> ㄹ
+        <Key android:codes="69" android:keyLabel=" \u3141 " android:keyWidth="25%p"/> ㅁ
+        <Key android:codes="70" android:keyLabel="\u3142\u314d\u3143" android:keyWidth="25%p"/> ㅂ ㅍ ㅃ
+        <Key android:codes="10" android:keyIcon="@drawable/sym_keyboard_return"
+                android:keyWidth="25%p" android:keyEdgeFlags="right"/>
+    </Row>
+    
+    <Row android:rowEdgeFlags="bottom"> 
+        <Key android:codes="71" android:keyLabel="\u3145\u3146" android:keyWidth="25%p"/> ㅅ ㅆ
+        <Key android:codes="72" android:keyLabel="\u3147\u314e" android:keyWidth="25%p"/> ㅇ ㅎ
+        <Key android:codes="73" android:keyLabel="\u3148\u314a\u3149" android:keyWidth="25%p"/> ㅈ ㅊ ㅉ
+        <Key android:codes="-2" android:keyLabel="123" android:keyWidth="25%p"/>
+    </Row>
+</Keyboard>

@@ -1,0 +1,88 @@
+8
+
+dir
+3
+https://hangulkeyboard.googlecode.com/svn/trunk/HangulKeyboard/src/org/kandroid/app/hangulkeyboard
+https://hangulkeyboard.googlecode.com/svn
+
+
+
+2009-05-21T13:10:24.522554Z
+3
+yangjeongsoo@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+HangulKeyboard.java
+file
+
+
+
+
+2009-05-07T19:31:42.058125Z
+7b88f53a4192b7e7dba6cb4213c3b9c0
+2009-05-21T13:10:24.522554Z
+3
+yangjeongsoo@gmail.com
+
+LatinKeyboardView.java
+file
+
+
+
+
+2009-05-15T10:14:21.392875Z
+6743979d2e296dc4cdd5bb2e3e215380
+2009-05-21T13:10:24.522554Z
+3
+yangjeongsoo@gmail.com
+
+SejongKeyboard.java
+file
+
+
+
+
+2009-05-14T06:05:51.862495Z
+b68eed24cadedddbc332b7d10494eb12
+2009-05-21T13:10:24.522554Z
+3
+yangjeongsoo@gmail.com
+
+CandidateView.java
+file
+
+
+
+
+2009-05-08T22:15:40.562500Z
+769d4f30a0aeba63b685ccc928bb4177
+2009-05-21T13:10:24.522554Z
+3
+yangjeongsoo@gmail.com
+
+LatinKeyboard.java
+file
+
+
+
+
+2009-05-15T09:24:25.627250Z
+056a6d9b8abcc2c6fd42a4140c560efa
+2009-05-21T13:10:24.522554Z
+3
+yangjeongsoo@gmail.com
+
+SoftKeyboard.java
+file
+
+
+
+
+2009-05-16T22:57:09.330375Z
+58126dc2b411b2fc2c7a7abcc3cdc39c
+2009-05-21T13:10:24.522554Z
+3
+yangjeongsoo@gmail.com
+

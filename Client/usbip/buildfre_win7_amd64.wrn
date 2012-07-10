@@ -1,0 +1,4 @@
+1>warnings in directory c:\winddk\7600.16385.1\src\usb\usbip_windows-0.2.0.0
+1>c:\winddk\7600.16385.1\src\usb\usbip_windows-0.2.0.0\busenum.rc(10) : warning RC4005: 'VER_PRODUCTVERSION' : redefinition
+1>c:\winddk\7600.16385.1\src\usb\usbip_windows-0.2.0.0\busenum.rc(11) : warning RC4005: 'VER_PRODUCTVERSION_STR' : redefinition
+1>c:\winddk\7600.16385.1\src\usb\usbip_windows-0.2.0.0\busenum.rc(13) : warning RC4005: 'VER_PRODUCTNAME_STR' : redefinition

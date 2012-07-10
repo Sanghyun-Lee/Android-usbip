@@ -1,0 +1,21 @@
+int main(int argc, char* argv[]) {
+	int speed;
+	char c, c2;
+
+	printf("input key\n");
+
+	while(1) {
+		c = getchar();
+		if(c=='\n'){
+			printf("nanniggu\n");
+			continue;
+		}
+		printf("input:%c\n",c);
+		if(c>='1' && c<='9') { // move
+			c2 = getchar();
+			printf("input:%c\n",c2);
+			speed = c2-'0';
+		}
+	}
+	return 0;
+}

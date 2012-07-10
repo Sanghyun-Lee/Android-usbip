@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/3/trunk/HangulKeyboard/src/org/kandroid/app/hangulkeyboard
+END
+HangulKeyboard.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3/trunk/HangulKeyboard/src/org/kandroid/app/hangulkeyboard/HangulKeyboard.java
+END
+LatinKeyboardView.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3/trunk/HangulKeyboard/src/org/kandroid/app/hangulkeyboard/LatinKeyboardView.java
+END
+SejongKeyboard.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3/trunk/HangulKeyboard/src/org/kandroid/app/hangulkeyboard/SejongKeyboard.java
+END
+CandidateView.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3/trunk/HangulKeyboard/src/org/kandroid/app/hangulkeyboard/CandidateView.java
+END
+LatinKeyboard.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3/trunk/HangulKeyboard/src/org/kandroid/app/hangulkeyboard/LatinKeyboard.java
+END
+SoftKeyboard.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3/trunk/HangulKeyboard/src/org/kandroid/app/hangulkeyboard/SoftKeyboard.java
+END

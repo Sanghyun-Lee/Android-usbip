@@ -1,0 +1,8 @@
+BUILD: Computing Include file dependencies:
+BUILD: Examining c:\documents and settings\administrator\oacr invalidate root:x86fre /autocleanqueue
+1>Building generated files in c:\documents and settings\administrator\1>'nmake.exe /nologo BUILDMSG=Stop. -i BUILD_PASS=PASS0 NOLINK=1 PASS0ONLY=1 MAKEDIR_RELATIVE_TO_BASEDIR='
+1>c:\winddk\7600.16385.1\bin\makefile.new(449) : fatal error U1023: syntax error in expression
+1>errors in directory c:\documents and settings\administrator\1>Stop.
+1>nmake.exe /nologo BUILDMSG=Stop. -i BUILD_PASS=PASS0 NOLINK=1 PASS0ONLY=1 MAKEDIR_RELATIVE_TO_BASEDIR= failed - rc = 2
+
+BUILD: Examining c:\documents and settings\administrator\Compile errors: not linking c:\documents and settings\administrator\
